@@ -131,6 +131,40 @@ git config --global user.email jecaudal@student.42.fr
 export PATH=$PATH:/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin"
 
 code --install-extension shan.code-settings-sync
+
+echo "{
+	"workbench.startupEditor": "newUntitledFile",
+    "clock.alignment": "Right",
+    "clock.format": "H:MM",
+    "editor.minimap.enabled": false,
+    "editor.renderWhitespace": "boundary",
+    "files.autoSave": "afterDelay",
+    "editor.detectIndentation": false,
+	"editor.insertSpaces": false,
+	"C_Cpp.suggestSnippets": false,
+	"editor.rulers": [
+		80
+	],
+	"extensions.autoCheckUpdates": false,
+	"extensions.autoUpdate": false,
+	"update.mode": "none",
+	"files.autoSaveDelay": 1500,
+	"sync.autoDownload": true,
+	"sync.autoUpload": true,
+	"sync.forceUpload": true,
+	"sync.quietSync": true,
+	"sync.gist": "a3bcc1e7560714caf1c91c7f073567ab",
+	"42header.email": "jecaudal@student.42.fr",
+	"42header.username": "jecaudal",
+	"files.insertFinalNewline": true,
+	"files.exclude": {
+		"**/*.o": true
+	},
+	"editor.fontSize": 15,
+	"terminal.integrated.fontSize": 16,
+	"window.zoomLevel": -1
+}" > $HOME/.config/Code/User/settings.json
+
 echo "The VM will reboot in 3 seconds..."
 sleep 3
 sudo reboot
