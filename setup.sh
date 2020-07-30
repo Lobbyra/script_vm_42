@@ -6,7 +6,7 @@ NC='\033[0m'
 
 if [ "$EUID" -ne 0 ]
 then
-	printf "${ORANGE}WARNING : ${NC}Please run this script with sudo. :)\n"
+	printf "${ORANGE}WARNING : ${NC}Please run this script with sudo. The password for it is \"user42\". :)\n"
 	exit
 fi
 
@@ -49,7 +49,8 @@ do
 done
 
 sleep 1
-printf "${GREEN}Apt update done, you can upgrade but it could be long.${NC}\n"
+printf "${GREEN}Apt update done, you can upgrade but it could be long !${NC}\n"
+printf "${ORANGE}You can upgrade but it could be long and lock apt. :/${NC}\n"
 
 sudo update-locale LANG=en_US.UTF-8 LANGUAGE &> /dev/null
 
