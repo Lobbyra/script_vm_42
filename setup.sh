@@ -106,5 +106,14 @@ printf "${GREEN}setup default dir to $HOME/code${NC}\n"
 sleep 1
 printf "${GREEN}Workflow setup${NC}\n"
 
-echo "The VM will reboot in 3 seconds..."
-sleep 3
+echo "The VM will reboot in 5 seconds..."
+sleep 1
+printf "1"
+sleep 1
+printf "\b2"
+sleep 1
+printf "\b3"
+sleep 1
+printf "\b4"
+sleep 1
+printf "\b5"
