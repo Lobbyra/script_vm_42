@@ -116,4 +116,5 @@ printf "\b3"
 sleep 1
 printf "\b4"
 sleep 1
-printf "\b5"
+printf "\b5\n"
+sudo reboot
