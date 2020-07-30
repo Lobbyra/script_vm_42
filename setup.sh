@@ -85,12 +85,11 @@ then
 	email="marvin@student.42.fr"
 fi
 
-runuser -l user42 -c "echo \"
-{
-	\"42header.email\": \"$login\",
-    \"42header.username\": \"$email\"
+sudo runuser -l user42 -c "echo -n \"{
+	\\\"42header.email\\\": \\\"$login\\\",
+	\\\"42header.username\\\": \\\"$email\\\"
 }
-\" > $HOME/.config/Code/User/settings.json"
+\"" > $HOME/.config/Code/User/settings.json
 
 sleep 1
 printf "${GREEN}Vs Code configuration done.\n${NC}"
