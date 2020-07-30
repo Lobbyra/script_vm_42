@@ -13,7 +13,7 @@ fi
 echo "user42\nuser42" | sudo passwd root > /dev/null
 clear
 sleep 1
-printf "${GREEN}root password changed to user42.${NC}\n"
+printf "${GREEN}root password changed to \"user42\".${NC}\n"
 
 # This down code is to disable daily update that can lock apt use at start
 # and for a long time... Do apt update sometimes.
