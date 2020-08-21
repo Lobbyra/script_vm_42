@@ -79,11 +79,9 @@ if [[ "$login" == "" ]]
 then
 	login="marvin"
 fi
-printf "Enter your email [Nothing for marvin@student.42.fr] : "
-read email
 if [[ "$email" == "" ]]
 then
-	email="marvin@student.42.fr"
+	email="$login@student.42.fr"
 fi
 
 sudo runuser -l user42 -c "echo -n \"{
@@ -91,6 +89,7 @@ sudo runuser -l user42 -c "echo -n \"{
 	\\\"42header.username\\\": \\\"$email\\\"
 }
 \"" > $HOME/.config/Code/User/settings.json
+chown user42 $HOME/.config/Code/User/settings.json
 
 sleep 1
 printf "${GREEN}Vs Code configuration done.\n${NC}"
